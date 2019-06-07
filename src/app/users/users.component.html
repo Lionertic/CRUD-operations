@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Name</h3>
+    </div>
+    <div class="col-md-4">
+      <h3>Balance</h3>
+    </div>
+    <div class="col-md-4">
+      <h3>Phone Number</h3>
+    </div>
+  </div>
+  <div *ngFor="let user of users">
+    <div class="row">
+        <div class="col-md-4">
+          {{ user.Name }}
+        </div>
+        <div class="col-md-4">
+          {{ user.Balance }}
+        </div>
+        <div class="col-md-4">
+          {{ user.Phone }}
+        </div>
+    </div>
+  </div>
+</div>

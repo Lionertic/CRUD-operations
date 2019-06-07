@@ -1,0 +1,7 @@
+<h1 *ngIf="isView">Welcome</h1>
+<div class=center>
+    <a class="insert" routerLink="/user/create" (click)="change(false)"><button class="button"><span>Create Users</span></button></a>
+    <a class="intro" routerLink="/users/list" (click)="change(false)" routerLinkActive="active"><button class="button"><span>View All Users</span></button></a>
+    <a class="delete" routerLink="/users/delete" (click)="change(false)"><button class="button"><span>Delete Users</span></button></a>
+</div>
+<router-outlet></router-outlet>
