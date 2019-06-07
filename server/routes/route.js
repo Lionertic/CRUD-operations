@@ -28,14 +28,14 @@ route.post('/user',(req,res,next)=>{
     });
 });
 
-// route.delete('/user/:id',(req,res,next)=>{
-//     User.deleteOne({_id:req.params.id},(err,result)=>{
-//         if(err)
-//             res.json(err);
-//         else
-//             res.json(result);
-//     });
-// });
+route.put('/user/:id',(req,res,next)=>{
+    User.updateOne({_id:req.params.id},{Name:req.body.Name,Phone:req.body.Phone,Balance:req.body.Balance},(err,result)=>{
+        if(err)
+            res.json(err);
+        else
+            res.json(result);
+    });
+});
 
 route.delete('/user/:id',(req,res,next)=>{
     User.deleteOne({_id:req.params.id},(err,result)=>{

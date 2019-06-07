@@ -14,4 +14,8 @@ export class AppComponent {
     this.isView=cha;
   }
 
+  clicked(cha:boolean){
+    alert('click')
+    this.change(cha);
+  }
 }

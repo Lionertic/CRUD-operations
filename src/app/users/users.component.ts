@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import {User} from '../Users';
 import {UsersService} from '../users.service';
 
@@ -11,6 +11,7 @@ export class UsersComponent implements OnInit {
 
   users:User[]
 
+  @Output() clickEvent = new EventEmitter<boolean>()
   constructor(private userService:UsersService) { }
 
   ngOnInit() {
@@ -18,4 +19,7 @@ export class UsersComponent implements OnInit {
       .subscribe( users => this.users= users)
   }
 
+  change(val:boolean){
+    this.clickEvent.emit(false)
+  }
 }

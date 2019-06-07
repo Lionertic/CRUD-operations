@@ -16,4 +16,10 @@ export class UsersService {
   deleteUser(id){
     return this.http.delete<JSON>('/api/user/'+id)
   }
+
+  updateUser(user:User){
+    var header =new HttpHeaders();
+    header.append('Content-Type','application/json');
+    return this.http.put<JSON>('/api/user/'+user._id,user,{headers:header});
+  }
 }

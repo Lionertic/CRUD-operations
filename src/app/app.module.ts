@@ -8,11 +8,13 @@ import { Routes, RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { UserInsertComponent } from './user-insert/user-insert.component';
 import { UserDeleteComponent } from './user-delete/user-delete.component';
+import { UserUpdateComponent } from './user-update/user-update.component';
 
 const appRoutes : Routes=[
   {path: 'users/list' , component: UsersComponent},
   {path: 'user/create', component: UserInsertComponent},
-  {path: 'users/delete',component:UserDeleteComponent}
+  {path: 'users/delete',component:UserDeleteComponent},
+  {path: 'users/:id',component:UserUpdateComponent}
 ]
 
 @NgModule({
@@ -20,7 +22,8 @@ const appRoutes : Routes=[
     AppComponent,
     UsersComponent,
     UserInsertComponent,
-    UserDeleteComponent
+    UserDeleteComponent,
+    UserUpdateComponent
   ],
   imports: [
     BrowserModule,
