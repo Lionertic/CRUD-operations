@@ -28,6 +28,8 @@ export class UserUpdateComponent implements OnInit {
       Balance:this.balance
     }
     this.userService.updateUser(user)
-      .subscribe(res=>res)
+      .subscribe((res)=>{
+        this.router.navigate(['/users/list'])
+      })
   }
 }
