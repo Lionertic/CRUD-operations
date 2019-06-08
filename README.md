@@ -9,7 +9,7 @@ Screenshots and and demo video has been included in the DEMO folder.
 <p float="left">
   <img src="DEMO/welcomePage.png" width="800" height="401">
   <img src="DEMO/viewPage.png" width="800" height="401">
-  <img src="DEMO/createPage.png" width="800" height="401">
+  <img src="DEMO/insertPage.png" width="800" height="401">
   <img src="DEMO/updatePage.png" width="800" height="401">
   <img src="DEMO/deletePage.png" width="800" height="401">
 </p>
